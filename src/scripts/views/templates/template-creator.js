@@ -179,19 +179,27 @@ const createReviewInputTemplate = () => `
 `;
 
 const createSnackbarTemplate = (message) => `
-  <div class="snackbar__message">
+  <div class="snackbar__message" role="alert" aria-describedby="${message}">
     ${message}
   </div>
 `;
 
 const createFavoriteButtonTemplate = () => `
-  <button class="favorite-button favorite-button--primary">
+  <button
+    id="favoriteButton"
+    class="favorite-button favorite-button--primary"
+    aria-label="favorite this restaurant"
+  >
     Add To Favorite
   </button>
 `;
 
 const createFavoritedButtonTemplate = () => `
-  <button class="favorite-button favorite-button--secondary">
+  <button
+    id="unfavoriteButton"
+    class="favorite-button favorite-button--secondary"
+    aria-label="unfavorite this restaurant"
+  >
     Remove From Favorite
   </button>
 `;
