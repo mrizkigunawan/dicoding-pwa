@@ -1,3 +1,4 @@
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
@@ -39,6 +40,8 @@ const Detail = {
 
       FavoriteButtonInitiator.init({
         favoriteButtonContainer: document.querySelector('#favorite-button-container'),
+        favoriteRestaurant: FavoriteRestaurantIdb,
+        snackbarHelper: SnackbarInitiator,
         restaurant: {
           id: restaurant.id,
           name: restaurant.name,
