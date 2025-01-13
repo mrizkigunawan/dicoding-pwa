@@ -21,12 +21,7 @@ const createRestaurantItemTemplate = (restaurant) => `
             ${restaurant.rating}
           </span>
         </div>
-        <a
-          href="/#/detail/${restaurant.id}"
-          class="restaurant-item__name"
-        >
-          ${restaurant.name}
-        </a>
+        <a href="/#/detail/${restaurant.id}" class="restaurant-item__name">${restaurant.name}</a>
         <p class="restaurant-item__description">
           ${restaurant.description.substring(0, 100)}...
         </p>
@@ -55,9 +50,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </figure>
   <div class="detail-restaurant__content">
     <div class="detail-restaurant__content-section">
-      <h2 class="detail-restaurant__title">
-        ${restaurant.name}
-      </h2>
+      <h2 class="detail-restaurant__title">${restaurant.name}</h2>
       <div class="detail-restaurant__rating">
         <span class="detail-restaurant__rating-text">
           Rating
@@ -128,12 +121,8 @@ const createReviewListTemplate = (customerReviews) => `
             ${customerReviews.map((review) => `
               <li class="detail-restaurant__review-item">
                 <div class="review">
-                  <h5 class="review__title">
-                    ${review.name}
-                  </h5>
-                  <p class="review__review">
-                    ${review.review}
-                  </p>
+                  <h5 class="review__title">${review.name}</h5>
+                  <p class="review__review">${review.review}</p>
                   <span class="review__date">
                     ${review.date}
                   </span>
