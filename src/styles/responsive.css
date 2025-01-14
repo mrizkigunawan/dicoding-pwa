@@ -64,6 +64,7 @@
     padding: 0;
     background: unset;
     transform: unset;
+    transition: unset;
   }
 
   .nav__menu-item:not(.nav__menu-item:first-child) {

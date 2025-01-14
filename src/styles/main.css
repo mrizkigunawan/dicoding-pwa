@@ -124,12 +124,12 @@ main {
   padding-bottom: 40px;
   background: var(--white);
   transform: translateX(-100%);
-  transition: transform 200ms ease;
   z-index: 3;
 }
 
 .nav__menu--active {
   transform: translateX(0);
+  transition: transform 200ms ease;
 }
 
 .nav__menu-item:not(.nav__menu-item:first-child) {
