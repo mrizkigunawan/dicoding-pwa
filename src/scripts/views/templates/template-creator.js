@@ -8,17 +8,13 @@ const createRestaurantItemTemplate = (restaurant) => `
         <img
           src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
           alt="${restaurant.name}"
+          loading="lazy"
         >
       </figure>
       <div class="restaurant-item__card-content">
         <div class="restaurant-item__rating">
-          <img
-            src="./images/star.png"
-            alt="rating icon"
-            class="restaurant-item__rating-icon"
-          >
           <span class="restaurant-item__rating-text">
-            ${restaurant.rating}
+            ⭐ ${restaurant.rating}
           </span>
         </div>
         <a href="/#/detail/${restaurant.id}" class="restaurant-item__name">${restaurant.name}</a>
@@ -27,8 +23,10 @@ const createRestaurantItemTemplate = (restaurant) => `
         </p>
         <div class="restaurant-item__location">
           <img
-            src="./images/place.png"
+            src="./images/icon_location.svg"
             alt="location icon"
+            width="16"
+            height="16"
             class="restaurant-item__location-icon"
           >
           <span class="restaurant-item__location-text">
@@ -55,13 +53,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <span class="detail-restaurant__rating-text">
           Rating
         </span>
-        <img
-          src="./images/star.png"
-          alt="rating icon"
-          class="detail-restaurant__rating-icon"
-        >
         <span class="detail-restaurant__rating-text">
-          ${restaurant.rating}
+          ⭐ ${restaurant.rating}
         </span>
       </div>
     </div>

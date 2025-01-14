@@ -6,11 +6,14 @@ const Home = {
     return `
       <section class="hero">
         <figure class="hero__figure">
-          <img
-            src="./images/heros/hero-image_2.jpg"
-            alt="food on the table"
-            class="hero__figure-img"
-          >
+          <picture>
+            <source media="(max-width: 500px)" srcset="./images/hero-image_small.webp">
+            <img
+              src="./images/hero-image_2.webp"
+              alt="food on the table"
+              class="hero__figure-img"
+            >
+          </picture>
         </figure>
       </section>
       <section class="restaurant" id="main-content">
